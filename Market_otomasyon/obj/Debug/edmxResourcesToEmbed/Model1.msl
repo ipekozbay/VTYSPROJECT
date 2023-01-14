@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MarketProjeModelStoreContainer" CdmEntityContainer="MarketProjeEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="MarketProjeModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Borcs">
+      <EntityTypeMapping TypeName="MarketProjeModel.Borcs">
+        <MappingFragment StoreEntitySet="Borcs">
+          <ScalarProperty Name="BorcID" ColumnName="BorcID" />
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="MusteriAd" ColumnName="MusteriAd" />
+          <ScalarProperty Name="MusteriSoyad" ColumnName="MusteriSoyad" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+          <ScalarProperty Name="SatinAlmaTarihi" ColumnName="SatinAlmaTarihi" />
+          <ScalarProperty Name="MusteriOdeme" ColumnName="MusteriOdeme" />
+          <ScalarProperty Name="KalanBorc" ColumnName="KalanBorc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musteris">
+      <EntityTypeMapping TypeName="MarketProjeModel.Musteris">
+        <MappingFragment StoreEntitySet="Musteris">
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="MusteriAd" ColumnName="MusteriAd" />
+          <ScalarProperty Name="MusteriSoyad" ColumnName="MusteriSoyad" />
+          <ScalarProperty Name="TelefonNo" ColumnName="TelefonNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PesinSatis">
+      <EntityTypeMapping TypeName="MarketProjeModel.PesinSatis">
+        <MappingFragment StoreEntitySet="PesinSatis">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FaturaID" ColumnName="FaturaID" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Satıcıs">
+      <EntityTypeMapping TypeName="MarketProjeModel.Satıcıs">
+        <MappingFragment StoreEntitySet="Satıcıs">
+          <ScalarProperty Name="SaticiID" ColumnName="SaticiID" />
+          <ScalarProperty Name="SaticiAd" ColumnName="SaticiAd" />
+          <ScalarProperty Name="SaticiSoyad" ColumnName="SaticiSoyad" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Satis">
+      <EntityTypeMapping TypeName="MarketProjeModel.Satis">
+        <MappingFragment StoreEntitySet="Satis">
+          <ScalarProperty Name="SatisID" ColumnName="SatisID" />
+          <ScalarProperty Name="FaturaID" ColumnName="FaturaID" />
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+          <ScalarProperty Name="SatisTipi" ColumnName="SatisTipi" />
+          <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+          <ScalarProperty Name="SatinAlmaTarihi" ColumnName="SatinAlmaTarihi" />
+          <ScalarProperty Name="Barkod" ColumnName="Barkod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stoks">
+      <EntityTypeMapping TypeName="MarketProjeModel.Stoks">
+        <MappingFragment StoreEntitySet="Stoks">
+          <ScalarProperty Name="StokID" ColumnName="StokID" />
+          <ScalarProperty Name="UrunKodu" ColumnName="UrunKodu" />
+          <ScalarProperty Name="Barkod" ColumnName="Barkod" />
+          <ScalarProperty Name="Cesit" ColumnName="Cesit" />
+          <ScalarProperty Name="StokMiktari" ColumnName="StokMiktari" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="BirimGirdiFiyat" ColumnName="BirimGirdiFiyat" />
+          <ScalarProperty Name="SatisFiyati" ColumnName="SatisFiyati" />
+          <ScalarProperty Name="IrsaliyeNo" ColumnName="IrsaliyeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TedarikciBorcs">
+      <EntityTypeMapping TypeName="MarketProjeModel.TedarikciBorcs">
+        <MappingFragment StoreEntitySet="TedarikciBorcs">
+          <ScalarProperty Name="TedarikciBorcID" ColumnName="TedarikciBorcID" />
+          <ScalarProperty Name="TedarikciID" ColumnName="TedarikciID" />
+          <ScalarProperty Name="Tedarikcisim" ColumnName="Tedarikcisim" />
+          <ScalarProperty Name="IrsaliyeNo" ColumnName="IrsaliyeNo" />
+          <ScalarProperty Name="TedarikBorc" ColumnName="TedarikBorc" />
+          <ScalarProperty Name="TedarikOdeme" ColumnName="TedarikOdeme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tedarikcis">
+      <EntityTypeMapping TypeName="MarketProjeModel.Tedarikcis">
+        <MappingFragment StoreEntitySet="Tedarikcis">
+          <ScalarProperty Name="TedarikciID" ColumnName="TedarikciID" />
+          <ScalarProperty Name="Tedarikcisim" ColumnName="Tedarikcisim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VeresiyeSatis">
+      <EntityTypeMapping TypeName="MarketProjeModel.VeresiyeSatis">
+        <MappingFragment StoreEntitySet="VeresiyeSatis">
+          <ScalarProperty Name="VeresiyeSatisID" ColumnName="VeresiyeSatisID" />
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="MusteriAd" ColumnName="MusteriAd" />
+          <ScalarProperty Name="MusteriSoyad" ColumnName="MusteriSoyad" />
+          <ScalarProperty Name="SatinAlmaTarihi" ColumnName="SatinAlmaTarihi" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

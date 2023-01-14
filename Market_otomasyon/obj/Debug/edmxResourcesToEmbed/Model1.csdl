@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarketProjeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Borcs">
+    <Key>
+      <PropertyRef Name="BorcID" />
+    </Key>
+    <Property Name="BorcID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="MusteriAd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tutar" Type="Double" Nullable="false" />
+    <Property Name="SatinAlmaTarihi" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MusteriOdeme" Type="Double" Nullable="false" />
+    <Property Name="KalanBorc" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Musteris">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TelefonNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PesinSatis">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FaturaID" Type="Int32" Nullable="false" />
+    <Property Name="Tutar" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Satıcıs">
+    <Key>
+      <PropertyRef Name="SaticiID" />
+    </Key>
+    <Property Name="SaticiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaticiAd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SaticiSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Satis">
+    <Key>
+      <PropertyRef Name="SatisID" />
+    </Key>
+    <Property Name="SatisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FaturaID" Type="Int32" Nullable="false" />
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="UrunID" Type="Int32" Nullable="false" />
+    <Property Name="SatisTipi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Miktar" Type="Int32" Nullable="false" />
+    <Property Name="Tutar" Type="Double" Nullable="false" />
+    <Property Name="SatinAlmaTarihi" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Barkod" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stoks">
+    <Key>
+      <PropertyRef Name="StokID" />
+    </Key>
+    <Property Name="StokID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunKodu" Type="Int32" Nullable="false" />
+    <Property Name="Barkod" Type="Int32" Nullable="false" />
+    <Property Name="Cesit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StokMiktari" Type="Int32" Nullable="false" />
+    <Property Name="UrunAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BirimGirdiFiyat" Type="Double" Nullable="false" />
+    <Property Name="SatisFiyati" Type="Double" Nullable="false" />
+    <Property Name="IrsaliyeNo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TedarikciBorcs">
+    <Key>
+      <PropertyRef Name="TedarikciBorcID" />
+    </Key>
+    <Property Name="TedarikciBorcID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TedarikciID" Type="Int32" Nullable="false" />
+    <Property Name="Tedarikcisim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IrsaliyeNo" Type="Int32" Nullable="false" />
+    <Property Name="TedarikBorc" Type="Double" Nullable="false" />
+    <Property Name="TedarikOdeme" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tedarikcis">
+    <Key>
+      <PropertyRef Name="TedarikciID" />
+    </Key>
+    <Property Name="TedarikciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tedarikcisim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VeresiyeSatis">
+    <Key>
+      <PropertyRef Name="VeresiyeSatisID" />
+    </Key>
+    <Property Name="VeresiyeSatisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="MusteriAd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SatinAlmaTarihi" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Tutar" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MarketProjeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="Borcs" EntityType="Self.Borcs" />
+    <EntitySet Name="Musteris" EntityType="Self.Musteris" />
+    <EntitySet Name="PesinSatis" EntityType="Self.PesinSatis" />
+    <EntitySet Name="Satıcıs" EntityType="Self.Satıcıs" />
+    <EntitySet Name="Satis" EntityType="Self.Satis" />
+    <EntitySet Name="Stoks" EntityType="Self.Stoks" />
+    <EntitySet Name="TedarikciBorcs" EntityType="Self.TedarikciBorcs" />
+    <EntitySet Name="Tedarikcis" EntityType="Self.Tedarikcis" />
+    <EntitySet Name="VeresiyeSatis" EntityType="Self.VeresiyeSatis" />
+  </EntityContainer>
+</Schema>

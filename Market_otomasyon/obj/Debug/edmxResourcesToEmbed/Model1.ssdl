@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarketProjeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Borcs">
+    <Key>
+      <PropertyRef Name="BorcID" />
+    </Key>
+    <Property Name="BorcID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriID" Type="int" Nullable="false" />
+    <Property Name="MusteriAd" Type="nvarchar(max)" />
+    <Property Name="MusteriSoyad" Type="nvarchar(max)" />
+    <Property Name="Tutar" Type="float" Nullable="false" />
+    <Property Name="SatinAlmaTarihi" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="MusteriOdeme" Type="float" Nullable="false" />
+    <Property Name="KalanBorc" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Musteris">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriAd" Type="nvarchar(max)" />
+    <Property Name="MusteriSoyad" Type="nvarchar(max)" />
+    <Property Name="TelefonNo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PesinSatis">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FaturaID" Type="int" Nullable="false" />
+    <Property Name="Tutar" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Satıcıs">
+    <Key>
+      <PropertyRef Name="SaticiID" />
+    </Key>
+    <Property Name="SaticiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaticiAd" Type="nvarchar(max)" />
+    <Property Name="SaticiSoyad" Type="nvarchar(max)" />
+    <Property Name="KullaniciAdi" Type="nvarchar(max)" />
+    <Property Name="Sifre" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Satis">
+    <Key>
+      <PropertyRef Name="SatisID" />
+    </Key>
+    <Property Name="SatisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FaturaID" Type="int" Nullable="false" />
+    <Property Name="MusteriID" Type="int" Nullable="false" />
+    <Property Name="UrunID" Type="int" Nullable="false" />
+    <Property Name="SatisTipi" Type="nvarchar(max)" />
+    <Property Name="Miktar" Type="int" Nullable="false" />
+    <Property Name="Tutar" Type="float" Nullable="false" />
+    <Property Name="SatinAlmaTarihi" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Barkod" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stoks">
+    <Key>
+      <PropertyRef Name="StokID" />
+    </Key>
+    <Property Name="StokID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunKodu" Type="int" Nullable="false" />
+    <Property Name="Barkod" Type="int" Nullable="false" />
+    <Property Name="Cesit" Type="nvarchar(max)" />
+    <Property Name="StokMiktari" Type="int" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar(max)" />
+    <Property Name="BirimGirdiFiyat" Type="float" Nullable="false" />
+    <Property Name="SatisFiyati" Type="float" Nullable="false" />
+    <Property Name="IrsaliyeNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TedarikciBorcs">
+    <Key>
+      <PropertyRef Name="TedarikciBorcID" />
+    </Key>
+    <Property Name="TedarikciBorcID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TedarikciID" Type="int" Nullable="false" />
+    <Property Name="Tedarikcisim" Type="nvarchar(max)" />
+    <Property Name="IrsaliyeNo" Type="int" Nullable="false" />
+    <Property Name="TedarikBorc" Type="float" Nullable="false" />
+    <Property Name="TedarikOdeme" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tedarikcis">
+    <Key>
+      <PropertyRef Name="TedarikciID" />
+    </Key>
+    <Property Name="TedarikciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tedarikcisim" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="VeresiyeSatis">
+    <Key>
+      <PropertyRef Name="VeresiyeSatisID" />
+    </Key>
+    <Property Name="VeresiyeSatisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriID" Type="int" Nullable="false" />
+    <Property Name="MusteriAd" Type="nvarchar(max)" />
+    <Property Name="MusteriSoyad" Type="nvarchar(max)" />
+    <Property Name="SatinAlmaTarihi" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Tutar" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MarketProjeModelStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Borcs" EntityType="Self.Borcs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musteris" EntityType="Self.Musteris" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PesinSatis" EntityType="Self.PesinSatis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Satıcıs" EntityType="Self.Satıcıs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stoks" EntityType="Self.Stoks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TedarikciBorcs" EntityType="Self.TedarikciBorcs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tedarikcis" EntityType="Self.Tedarikcis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VeresiyeSatis" EntityType="Self.VeresiyeSatis" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
